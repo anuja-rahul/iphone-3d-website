@@ -20,6 +20,8 @@
 
 ---
 
+### 45:11
+
 - [x] Vite setup
 - [x] Navbar
 - [x] Jumbotron Section
