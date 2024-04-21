@@ -3,18 +3,30 @@ import Jumbotron from "./components/Jumbotron";
 import SoundSection from "./components/SoundSection";
 import DisplaySection from "./components/DisplaySection";
 import WebgiViewer from "./components/WebgiViewer";
+import { useRef } from "react";
+import Loader from "./components/Loader";
 
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
+  const webgiViewerRef = useRef();
+  const contentRef = useRef();
+
+  const handlePreview = () => {
+    webgiViewerRef.current.triggerPreview();
+  };
+
   return (
     <div className="App">
-      <Nav />
-      <Analytics />
-      <Jumbotron />
-      <SoundSection />
-      <DisplaySection />
-      <WebgiViewer />
+      <Loader />
+      <div ref={contentRef} id="content">
+        <Nav />
+        <Analytics />
+        <Jumbotron />
+        <SoundSection />
+        <DisplaySection triggerPreview={handlePreview} />
+      </div>
+      <WebgiViewer contentRef={contentRef} ref={webgiViewerRef} />
     </div>
   );
 }

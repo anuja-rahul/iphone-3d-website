@@ -20,15 +20,16 @@
 
 ---
 
-### 1:14:00
-
 - [x] Vite setup
 - [x] Navbar
 - [x] Jumbotron Section
 - [x] Sound Section
 - [x] Display Section
 - [x] Scroll animations
-- [ ] Try me Section
+- [x] Try me Section
+- [x] Mobile Sections
+- [x] Preloader
+- [x] Deployment
 
 ---
 
